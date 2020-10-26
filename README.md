@@ -7,7 +7,7 @@
 
 ## Live Demo of the SPA 
 
-#Click here: [Demo](https://minoveaz.github.io/angular-web-portfolio/#/home) 
+#Click here: [Demo](https://minoveaz.github.io/SPA-ComicHeroes-Angular/#/heroes) 
 version 1.0.0
 
 ## Follow Me
