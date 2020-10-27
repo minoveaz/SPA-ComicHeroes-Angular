@@ -12,6 +12,14 @@ body {
     width: 150px;
 }
 
+.table-pipes th {
+    text-align: center;
+}
+
+.table-pipes td {
+    text-align: center;
+}
+
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
