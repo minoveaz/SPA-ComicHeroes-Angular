@@ -1,0 +1,21 @@
+<div class="container main-container">
+
+    <h1 class="mt-3 animated fadeIn fast">Demos <small> de angular</small> </h1>
+    <br>
+    <p [style.fontSize.px]="tamano"> Hola Mundo... esta es una etiqueta</p>
+
+    <table>
+        <tr>
+            <td>
+                <button class="btn btn-primary" (click)="tamano= tamano + 5">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="tamano= tamano - 5">
+                    <i class="fa fa-minus"></i>
+             </button>
+            </td>
+        </tr>
+    </table>
+</div>

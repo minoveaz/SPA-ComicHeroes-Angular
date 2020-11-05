@@ -6,6 +6,7 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { NgStyleComponent } from './components/ng-style/ng-style/ng-style.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'heroe/:id', component: HeroeComponent},
   { path: 'buscar/:termino', component: BuscadorComponent},
   { path: 'pipes', component: PipesComponent},
+  { path: 'demos', component: NgStyleComponent},
   { path: '', component: HomeComponent},
   { path: '**', component: HomeComponent},
 ];

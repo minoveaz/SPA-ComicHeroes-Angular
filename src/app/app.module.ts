@@ -28,6 +28,8 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
 import { DomsafePipe } from './pipes/domsafe.pipe';
 import { ShowpasswordPipe } from './pipes/showpassword.pipe';
+import { NgStyleComponent } from './components/ng-style/ng-style/ng-style.component';
+
 
 
 @NgModule({
@@ -43,8 +45,9 @@ import { ShowpasswordPipe } from './pipes/showpassword.pipe';
     PipesComponent,
     CapitalizadoPipe,
     DomsafePipe,
-    ShowpasswordPipe
-  ],
+    ShowpasswordPipe,
+    NgStyleComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule
