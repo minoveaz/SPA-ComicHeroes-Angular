@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { LOCALE_ID, NgModule } from '@angular/core';
 
+import { FormsModule} from '@angular/forms';
+
 import { registerLocaleData } from '@angular/common';
 import localEs from '@angular/common/locales/es';
 import localFr from '@angular/common/locales/fr';
@@ -29,6 +31,8 @@ import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
 import { DomsafePipe } from './pipes/domsafe.pipe';
 import { ShowpasswordPipe } from './pipes/showpassword.pipe';
 import { NgStyleComponent } from './components/ng-style/ng-style/ng-style.component';
+import { FormsComponent } from './components/forms/forms.component';
+import { FormsReactiveComponent } from './components/forms-reactive/forms-reactive.component';
 
 
 
@@ -46,11 +50,14 @@ import { NgStyleComponent } from './components/ng-style/ng-style/ng-style.compon
     CapitalizadoPipe,
     DomsafePipe,
     ShowpasswordPipe,
-    NgStyleComponent
+    NgStyleComponent,
+    FormsComponent,
+    FormsReactiveComponent
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     HeroesService,
