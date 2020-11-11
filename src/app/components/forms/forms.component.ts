@@ -1,4 +1,3 @@
-import { NgForOf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -9,8 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class FormsComponent implements OnInit {
 
-  usuario: {
-    nombre: 'Miller'
+  usuario = {
+    nombre: ''
   };
 
   constructor() { }
