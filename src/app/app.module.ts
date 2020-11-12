@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { LOCALE_ID, NgModule } from '@angular/core';
 
 import { FormsModule} from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 import { registerLocaleData } from '@angular/common';
 import localEs from '@angular/common/locales/es';
@@ -36,6 +37,7 @@ import { FormsReactiveComponent } from './components/forms-reactive/forms-reacti
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +59,8 @@ import { FormsReactiveComponent } from './components/forms-reactive/forms-reacti
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     HeroesService,
