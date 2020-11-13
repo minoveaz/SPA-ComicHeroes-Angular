@@ -12,7 +12,9 @@ export class FormsComponent implements OnInit {
   usuario = {
     nombre: '',
     apellido: '',
-    correo: ''
+    correo: '',
+    country: '',
+    genero: 'M'
   };
 
   countries: any[] = [];
@@ -23,12 +25,14 @@ export class FormsComponent implements OnInit {
     this.countryService.getCountries()
     .subscribe(countries  => {
       this.countries = countries;
-      console.log(this.countries);
+      this.countries.unshift({
+        name: '[Seleccione un País]',
+        code: ''
+      });
     });
   }
 
   guardar( forma: NgForm){
-    console.log(forma);
 
     if (forma.invalid){
       Object.values(forma.controls).forEach( control => {

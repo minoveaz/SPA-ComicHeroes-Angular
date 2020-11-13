@@ -66,7 +66,7 @@
                 [disabled]="countries.length === 0"
                 [class.is-invalid]="country.invalid && country.touched"
                 required
-                ngModel
+                [ngModel]="usuario.country"
                 #country="ngModel">
           <option *ngFor="let country of countries"
                   [value]="country.code">
@@ -76,6 +76,36 @@
         <small  *ngIf="country.invalid && country.touched" 
       class="form-text text-danger">Seleccione un Pais</small>
       </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Genero</label>
+    <div class="col-8">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input"
+                type="radio"
+                name="genero"
+                value="M"
+                [class.is-invalid]="genero.invalid && genero.touched"
+                required
+                [ngModel]="usuario.genero"
+                #genero="ngModel">
+
+        <label class="form-check-label">Masculino</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input"
+                type="radio"
+                name="genero"
+                value="F"
+                [class.is-invalid]="genero.invalid && genero.touched"
+                required
+                [ngModel] = "usuario.genero"
+                #genero="ngModel">
+
+        <label class="form-check-label">Femenino</label>
+      </div>
+    </div>
   </div>
 
   <div class="form-group row">
