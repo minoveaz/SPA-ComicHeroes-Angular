@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { LOCALE_ID, NgModule } from '@angular/core';
 
-import { FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 
 import { registerLocaleData } from '@angular/common';
@@ -60,7 +60,8 @@ import { FormsReactiveComponent } from './components/forms-reactive/forms-reacti
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     HeroesService,
