@@ -6,7 +6,7 @@
 
     <div class="form-group row">
       <label class="col-2 col-form-label">Nombre</label>
-      <div class="col-8">
+      <div class="col">
 
         <input class="form-control"
                type="text"
@@ -21,7 +21,7 @@
 
     <div class="form-group row">
       <label class="col-2 col-form-label">Apellido</label>
-      <div class="col-8">
+      <div class="col">
 
         <input class="form-control"
                type="text"
@@ -38,7 +38,7 @@
 
   <div class="form-group row">
     <label class="col-2 col-form-label">Correo</label>
-    <div class="col-8">
+    <div class="col">
 
       <input class="form-control"
              type="email"
@@ -52,8 +52,116 @@
   </div>
 
   <div class="form-group row">
+    <label class="col-2 col-form-label">Usuario</label>
+    <div class="col">
+
+      <input class="form-control"
+             type="email"
+             placeholder="Ingrese su usuario"
+             formControlName="usuario"
+             [class.is-invalid]="usuarioNovalido">
+      <small *ngIf="usuarioNovalido" class="text-danger">
+      Este usuario no esta disponible
+    </small>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Contraseña</label>
+    <div class="col">
+
+      <input class="form-control"
+             type="password"
+             placeholder="Escriba la contraseña"
+             formControlName="pass1"
+             [class.is-invalid]="pass1Novalido">
+      <small *ngIf="pass1Novalido" class="text-danger">
+      Ingrese una contraseña
+    </small>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Repita la Contraseña</label>
+    <div class="col">
+
+      <input class="form-control"
+             type="password"
+             placeholder="Repita la contraseña"
+             formControlName="pass2"
+             [class.is-invalid]="pass2Novalido">
+      <small *ngIf="pass2Novalido" class="text-danger">
+      Escriba nuevamente la contraseña
+    </small>
+    </div>
+  </div>
+
+  <div class="form-group row" formGroupName="direccion">
+    <label class="col-2 col-form-label">Dirección</label>
+    <div class="form-row col">
+      <div class="col">
+        <input type="text"
+                class="form-control"
+                placeholder="Municipio"
+                formControlName="municipio"
+                [class.is-invalid]="municipioNoValido">
+        <small *ngIf="municipioNoValido" class="text-danger">
+          Ingrese un municipio 
+        </small>
+      </div>
+      <div class="col">
+        <input type="text"
+                class="form-control"
+                placeholder="Ciudad"
+                formControlName="ciudad"
+                [class.is-invalid]="ciudadNoValido">
+        <small *ngIf="ciudadNoValido" class="text-danger">
+          Ingrese una ciudad 
+        </small>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>Pasatiempos</th>
+            <th>Borrar</th>
+          </tr>
+        </thead>
+        <tbody formArrayName="pasatiempos">
+          <tr *ngFor="let control of pasatiempos.controls; let i = index">
+            <td>{{i + 1}}</td> 
+            <td>
+              <input class="form-control"
+                     type="text"
+                     [formControlName]="i">
+            </td>
+            <td>
+              <button class="btn btn-danger"
+                      type="button"
+                      (click)="borrarPasatiempo(i)">
+                Borrar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-primary mt-3 mb-5 btn-block"
+              type="button"
+              (click)="agregarPasatiempo()">
+        + Agregar
+      </button>
+    </div>
+  </div>
+
+  <div class="form-group row">
     <label class="col-2 col-form-label">&nbsp;</label>
-    <div class="input-group col-md-8">
+    <div class="input-group col">
       <button type="submit" class="btn btn-outline-primary btn-block">
         Guardar
       </button>

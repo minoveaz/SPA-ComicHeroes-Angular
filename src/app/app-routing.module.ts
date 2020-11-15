@@ -9,6 +9,8 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { NgStyleComponent } from './components/ng-style/ng-style/ng-style.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { FormsReactiveComponent } from './components/forms-reactive/forms-reactive.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 
 const routes: Routes = [
@@ -21,6 +23,8 @@ const routes: Routes = [
   { path: 'demos', component: NgStyleComponent},
   { path: 'forms', component: FormsComponent},
   { path: 'forms-reactive', component: FormsReactiveComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent},
   { path: '', component: HomeComponent},
   { path: '**', component: HomeComponent},
 ];

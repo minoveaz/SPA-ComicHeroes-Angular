@@ -34,6 +34,8 @@ import { ShowpasswordPipe } from './pipes/showpassword.pipe';
 import { NgStyleComponent } from './components/ng-style/ng-style/ng-style.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { FormsReactiveComponent } from './components/forms-reactive/forms-reactive.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 
 
@@ -54,7 +56,9 @@ import { FormsReactiveComponent } from './components/forms-reactive/forms-reacti
     ShowpasswordPipe,
     NgStyleComponent,
     FormsComponent,
-    FormsReactiveComponent
+    FormsReactiveComponent,
+    LoginComponent,
+    RegisterComponent
    ],
   imports: [
     BrowserModule,
