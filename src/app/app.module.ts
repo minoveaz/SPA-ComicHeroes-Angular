@@ -36,6 +36,8 @@ import { FormsComponent } from './components/forms/forms.component';
 import { FormsReactiveComponent } from './components/forms-reactive/forms-reactive.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { HereoCreateComponent } from './components/hereo-create/hereo-create.component';
+import { HeroesListComponent } from './components/heroes-list/heroes-list.component';
 
 
 
@@ -58,7 +60,9 @@ import { RegisterComponent } from './pages/register/register.component';
     FormsComponent,
     FormsReactiveComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HereoCreateComponent,
+    HeroesListComponent
    ],
   imports: [
     BrowserModule,

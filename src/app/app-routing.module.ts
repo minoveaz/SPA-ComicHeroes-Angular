@@ -11,6 +11,8 @@ import { FormsComponent } from './components/forms/forms.component';
 import { FormsReactiveComponent } from './components/forms-reactive/forms-reactive.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { HereoCreateComponent } from './components/hereo-create/hereo-create.component';
+import { HeroesListComponent } from './components/heroes-list/heroes-list.component';
 
 
 const routes: Routes = [
@@ -25,6 +27,8 @@ const routes: Routes = [
   { path: 'forms-reactive', component: FormsReactiveComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
+  { path: 'createheroe/:id', component: HereoCreateComponent},
+  { path: 'heroelist', component: HeroesListComponent},
   { path: '', component: HomeComponent},
   { path: '**', component: HomeComponent},
 ];
