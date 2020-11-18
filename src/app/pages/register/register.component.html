@@ -1,7 +1,8 @@
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100 p-t-50 p-b-90">
-            <form (ngSubmit)="onSubmit()"
+            <form (ngSubmit)="onSubmit( f)"
+                    #f="ngForm"
                   class="login100-form validate-form flex-sb flex-w">
 
                 <span class="login100-form-title p-b-51">
@@ -10,50 +11,84 @@
 
 
                 <!-- <span class="text-danger">El nombre es obligatorio</span> -->
-                <div class="wrap-input100 m-b-16">
-                    <input class="input100" 
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Nombre</label>
+                    <div class="col-8">
+                        <input class="form-control" 
                            type="text" 
                            name="nombre"
-                           [(ngModel)]="user.name"  
-                           placeholder="Nombre">
-
-                    <span class="focus-input100"></span>
+                           [(ngModel)]="user.name"
+                           minlength="4"  
+                           placeholder="Nombre"
+                           [class.is-invalid]="nombre.invalid && nombre.touched"
+                           #nombre="ngModel"
+                           required>
+                        <small  *ngIf="nombre.invalid && nombre.touched" 
+                                class="form-text text-danger">Ingrese al menos 5 letras
+                        </small>
+                    </div>     
                 </div>
                 
                 <!-- <span class="text-danger">El apellido es obligatorio</span> -->
-                <div class="wrap-input100 m-b-16">
-                    <input class="input100" 
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Apellidos</label>
+                    <div class="col-8">
+                        <input class="form-control" 
                            type="text" 
                            name="apellidos"
-                           [(ngModel)]="user.lastName"  
-                           placeholder="Apellidos">
-
-                    <span class="focus-input100"></span>
+                           [(ngModel)]="user.lastName"
+                           minlength="4"  
+                           placeholder="Apellidos"
+                           [class.is-invalid]="apellido.invalid && apellido.touched"
+                           #apellido="ngModel"
+                           required>
+                        <small  *ngIf="apellido.invalid && apellido.touched" 
+                           class="form-text text-danger">Ingrese al menos 5 letras
+                        </small>
+                    </div>
                 </div>
 
                 <!-- <span class="text-danger">El correo es obligatorio</span> -->
-                <div class="wrap-input100 m-b-16">
-                    <input class="input100" 
-                            type="text" 
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Email</label>
+                    <div class="col-8">
+                        <input class="form-control" 
+                            type="email"
+                            email
+                            required
                             name="email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
                             [(ngModel)]="user.email" 
-                            placeholder="Email">
-
-                    <span class="focus-input100"></span>
+                            placeholder="Email"
+                            [class.is-invalid]="email.invalid && email.touched"
+                            #email="ngModel">
+                        <small  *ngIf="email.invalid && email.touched" 
+                            class="form-text text-danger">Ingrese al menos 5 letras
+                        </small>
+                    </div>
                 </div>
 
                 <!-- <span class="text-danger">La contraseña debe de ser más de 6 letras</span> -->
-                <div class="wrap-input100 m-b-16" data-validate = "Password is required">
-                    <input class="input100"
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Contraseña</label>
+                    <div class="col-8">
+                        <input class="form-control"
                            type="password" 
                            name="password"
                            [(ngModel)]="user.password" 
-                           placeholder="Password">
-                    <span class="focus-input100"></span>
+                           placeholder="Password"
+                           [class.is-invalid]="password.invalid && password.touched"
+                           minlength="5"
+                           #password="ngModel"
+                           required>
+                        <small  *ngIf="password.invalid && password.touched" 
+                            class="form-text text-danger">Ingrese la constraseña
+                        </small>
+                    </div>
                 </div>
 
 
-                <div class="wrap-input100 m-b-16">
+                <div class="form-group row">
                     <label class="col-2 col-form-label">Genero</label>
                     <div class="col-8">
                       <div class="form-check form-check-inline">
@@ -63,7 +98,7 @@
                                 value="M"
                                 [class.is-invalid]="genero.invalid && genero.touched"
                                 required
-                                [ngModel]=""
+                                [ngModel]="user.gender"
                                 #genero="ngModel">
                         <label class="form-check-label form-label">Masculino</label>
                       </div>
@@ -74,7 +109,7 @@
                                 value="F"
                                 [class.is-invalid]="genero.invalid && genero.touched"
                                 required
-                                [ngModel] = ""
+                                [ngModel] = "user.gender"
                                 #genero="ngModel">
                         <label class="form-check-label form-label">Femenino</label>
                       </div>
@@ -90,7 +125,7 @@
                     </div>
 
                     <div>
-                        <a routerLink="/registro" class="txt1">
+                        <a routerLink="/login" class="txt1">
                             ¿Ya tienes cuenta? / Ingresar
                         </a>
                     </div>

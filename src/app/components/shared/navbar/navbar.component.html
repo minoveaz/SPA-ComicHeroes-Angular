@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
     <a class="navbar-brand" href="#">
         <img src="assets/img/A-64.png" width="30" height="30" alt="" loading="lazy" />
     </a>
@@ -6,7 +6,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" routerLinkActive="active">
                 <a class="nav-link" href="#" [routerLink]="['home']">Home</a>
@@ -36,22 +36,42 @@
                 Heroes CRUD
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#" [routerLink]="['heroelist']" >Heroe List</a>
-                    <a class="dropdown-item" href="#" [routerLink]="['createheroe']" >Create Heroe</a>
+                    <a class="dropdown-item" href="#" [routerLink]="['heroelist']" >Listado</a>
+                    <a class="dropdown-item" href="#" [routerLink]="['createheroe/new']" >Crear Heroe</a>
                 </div>
             </li>
             <!-- <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li> -->
+            
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Buscar héroe" (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto>
-            <button (click)="buscarHeroe(buscarTexto.value)" class="btn btn-outline-success my-2 my-sm-0" type="button">Buscar</button>
-        </form>
-        <ul class="navbar-nav mr-auto">
+        
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Buscar héroe" (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto>
+                <button (click)="buscarHeroe(buscarTexto.value)" class="btn btn-outline-success my-2 my-sm-0" type="button">Buscar</button>
+            </form>
             <li class="nav-item" routerLinkActive="active">
                 <a class="nav-link" [routerLink]="['about']">About</a>
             </li>
-        </ul>
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light">1
+                <i class="fas fa-bell"></i>
+              </a>
+            </li>
+            <li class="nav-item avatar dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0 w-25"
+                  alt="avatar image">
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                aria-labelledby="navbarDropdownMenuLink-55">
+                <a class="dropdown-item" [routerLink]="['login']">Login</a>
+                <a class="dropdown-item" href="#">Configuración</a>
+                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+              </div>
+            </li>
+          </ul>
     </div>
 </nav>
