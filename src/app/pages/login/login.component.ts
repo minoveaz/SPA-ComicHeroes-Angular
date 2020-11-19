@@ -27,7 +27,8 @@ export class LoginComponent implements OnInit {
     this.user = new UserModel();
 
     if ( localStorage.getItem('email')){
-      
+      this.user.email = localStorage.getItem('email');
+      this.recordarme = true;
     }
   }
 

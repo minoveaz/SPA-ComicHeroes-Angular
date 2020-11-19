@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   user: UserModel;
+  recordarme = false;
 
   constructor( private auth: AuthService,
                private router: Router) { }
@@ -37,6 +38,10 @@ export class RegisterComponent implements OnInit {
       this.auth.newUser( this.user)
         .subscribe( resp => {
           console.log(resp);
+          if (this.recordarme){
+            localStorage.setItem('email', this.user.email);
+          }
+
           Swal.fire({
             title: this.user.email,
             text: 'Se ha registrado correctamente',

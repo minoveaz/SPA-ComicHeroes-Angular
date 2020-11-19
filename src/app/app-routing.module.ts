@@ -13,11 +13,11 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HereoCreateComponent } from './components/hereo-create/hereo-create.component';
 import { HeroesListComponent } from './components/heroes-list/heroes-list.component';
-
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
-  { path: 'about', component: AboutComponent},
+  { path: 'about', component: AboutComponent, canActivate: [ AuthGuard]},
   { path: 'heroes', component: HeroesComponent},
   { path: 'heroe/:id', component: HeroeComponent},
   { path: 'buscar/:termino', component: BuscadorComponent},
