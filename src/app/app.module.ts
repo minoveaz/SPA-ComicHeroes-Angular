@@ -4,6 +4,9 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 
+import { ChartsModule } from 'ng2-charts';
+
+
 import { registerLocaleData } from '@angular/common';
 import localEs from '@angular/common/locales/es';
 import localFr from '@angular/common/locales/fr';
@@ -27,10 +30,6 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
-import { PipesComponent } from './components/pipes/pipes.component';
-import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
-import { DomsafePipe } from './pipes/domsafe.pipe';
-import { ShowpasswordPipe } from './pipes/showpassword.pipe';
 import { NgStyleComponent } from './components/ng-style/ng-style/ng-style.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { FormsReactiveComponent } from './components/forms-reactive/forms-reactive.component';
@@ -38,8 +37,13 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HereoCreateComponent } from './components/hereo-create/hereo-create.component';
 import { HeroesListComponent } from './components/heroes-list/heroes-list.component';
+import { GraphicsComponent } from './components/graphics/graphics.component';
 
-
+// Pipes
+import { PipesComponent } from './components/pipes/pipes.component';
+import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
+import { DomsafePipe } from './pipes/domsafe.pipe';
+import { ShowpasswordPipe } from './pipes/showpassword.pipe';
 
 
 @NgModule({
@@ -62,14 +66,16 @@ import { HeroesListComponent } from './components/heroes-list/heroes-list.compon
     LoginComponent,
     RegisterComponent,
     HereoCreateComponent,
-    HeroesListComponent
+    HeroesListComponent,
+    GraphicsComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
   ],
   providers: [
     HeroesService,

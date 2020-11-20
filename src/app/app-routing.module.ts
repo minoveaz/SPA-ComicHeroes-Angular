@@ -14,6 +14,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { HereoCreateComponent } from './components/hereo-create/hereo-create.component';
 import { HeroesListComponent } from './components/heroes-list/heroes-list.component';
 import { AuthGuard } from './guards/auth.guard';
+import { GraphicsComponent } from './components/graphics/graphics.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'createheroe/:id', component: HereoCreateComponent},
   { path: 'heroelist', component: HeroesListComponent},
+  { path: 'line', component: GraphicsComponent},
   { path: '', component: HomeComponent},
   { path: '**', component: HomeComponent},
 ];
