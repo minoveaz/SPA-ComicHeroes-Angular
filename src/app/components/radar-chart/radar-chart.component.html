@@ -1,0 +1,15 @@
+<h1> Graficos Dinamicos <small>Angular</small></h1>
+<hr>
+
+<div class="row">
+    <div class="col-md-8">
+      <div style="display: block">
+        <canvas baseChart
+          [datasets]="radarChartData"
+          [options]="radarChartOptions"
+          [labels]="radarChartLabels"
+          [chartType]="radarChartType">
+        </canvas>
+      </div>
+    </div>
+  </div>

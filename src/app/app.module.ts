@@ -44,6 +44,9 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
 import { DomsafePipe } from './pipes/domsafe.pipe';
 import { ShowpasswordPipe } from './pipes/showpassword.pipe';
+import { BarchartComponent } from './components/barchart/barchart.component';
+import { DonutchartComponent } from './components/donutchart/donutchart.component';
+import { RadarChartComponent } from './components/radar-chart/radar-chart.component';
 
 
 @NgModule({
@@ -67,7 +70,10 @@ import { ShowpasswordPipe } from './pipes/showpassword.pipe';
     RegisterComponent,
     HereoCreateComponent,
     HeroesListComponent,
-    GraphicsComponent
+    GraphicsComponent,
+    BarchartComponent,
+    DonutchartComponent,
+    RadarChartComponent
    ],
   imports: [
     BrowserModule,

@@ -1,0 +1,18 @@
+<h1> Graficos Dinamicos <small>Angular</small></h1>
+<hr>
+
+<div class="row">
+    <div class="col-md-6">
+      <div style="display: block">
+        <canvas baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [plugins]="barChartPlugins"
+          [legend]="barChartLegend"
+          [chartType]="barChartType">
+        </canvas>
+      </div>
+      <button class="btn btn-primary btn-block" (click)="randomize()">Update</button>
+    </div>
+  </div>

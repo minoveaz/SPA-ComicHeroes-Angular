@@ -15,6 +15,11 @@ import { HereoCreateComponent } from './components/hereo-create/hereo-create.com
 import { HeroesListComponent } from './components/heroes-list/heroes-list.component';
 import { AuthGuard } from './guards/auth.guard';
 import { GraphicsComponent } from './components/graphics/graphics.component';
+import { BarchartComponent } from './components/barchart/barchart.component';
+import { DonutchartComponent } from './components/donutchart/donutchart.component';
+import { RadarChartComponent } from './components/radar-chart/radar-chart.component';
+
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -31,6 +36,9 @@ const routes: Routes = [
   { path: 'createheroe/:id', component: HereoCreateComponent},
   { path: 'heroelist', component: HeroesListComponent},
   { path: 'line', component: GraphicsComponent},
+  { path: 'bar', component: BarchartComponent},
+  { path: 'donut', component: DonutchartComponent},
+  { path: 'radar', component: RadarChartComponent},
   { path: '', component: HomeComponent},
   { path: '**', component: HomeComponent},
 ];
