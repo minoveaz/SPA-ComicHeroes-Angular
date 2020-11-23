@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 
 import { ChartsModule } from 'ng2-charts';
+import { ScrollingModule} from '@angular/cdk/scrolling';
 
 
 import { registerLocaleData } from '@angular/common';
@@ -47,6 +48,7 @@ import { ShowpasswordPipe } from './pipes/showpassword.pipe';
 import { BarchartComponent } from './components/barchart/barchart.component';
 import { DonutchartComponent } from './components/donutchart/donutchart.component';
 import { RadarChartComponent } from './components/radar-chart/radar-chart.component';
+import { VirtualComponent } from './components/virtual/virtual.component';
 
 
 @NgModule({
@@ -73,7 +75,8 @@ import { RadarChartComponent } from './components/radar-chart/radar-chart.compon
     GraphicsComponent,
     BarchartComponent,
     DonutchartComponent,
-    RadarChartComponent
+    RadarChartComponent,
+    VirtualComponent
    ],
   imports: [
     BrowserModule,
@@ -81,7 +84,8 @@ import { RadarChartComponent } from './components/radar-chart/radar-chart.compon
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    ChartsModule
+    ChartsModule,
+    ScrollingModule
   ],
   providers: [
     HeroesService,

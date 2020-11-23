@@ -18,7 +18,7 @@ import { GraphicsComponent } from './components/graphics/graphics.component';
 import { BarchartComponent } from './components/barchart/barchart.component';
 import { DonutchartComponent } from './components/donutchart/donutchart.component';
 import { RadarChartComponent } from './components/radar-chart/radar-chart.component';
-
+import { VirtualComponent } from './components/virtual/virtual.component';
 
 
 const routes: Routes = [
@@ -39,6 +39,7 @@ const routes: Routes = [
   { path: 'bar', component: BarchartComponent},
   { path: 'donut', component: DonutchartComponent},
   { path: 'radar', component: RadarChartComponent},
+  { path: 'virtual', component: VirtualComponent},
   { path: '', component: HomeComponent},
   { path: '**', component: HomeComponent},
 ];
