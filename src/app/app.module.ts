@@ -49,6 +49,7 @@ import { BarchartComponent } from './components/barchart/barchart.component';
 import { DonutchartComponent } from './components/donutchart/donutchart.component';
 import { RadarChartComponent } from './components/radar-chart/radar-chart.component';
 import { VirtualComponent } from './components/virtual/virtual.component';
+import { DragComponent } from './components/drag/drag.component';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { VirtualComponent } from './components/virtual/virtual.component';
     BarchartComponent,
     DonutchartComponent,
     RadarChartComponent,
-    VirtualComponent
+    VirtualComponent,
+    DragComponent
    ],
   imports: [
     BrowserModule,

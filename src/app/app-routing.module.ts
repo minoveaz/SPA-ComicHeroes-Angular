@@ -19,6 +19,7 @@ import { BarchartComponent } from './components/barchart/barchart.component';
 import { DonutchartComponent } from './components/donutchart/donutchart.component';
 import { RadarChartComponent } from './components/radar-chart/radar-chart.component';
 import { VirtualComponent } from './components/virtual/virtual.component';
+import { DragComponent } from './components/drag/drag.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,7 @@ const routes: Routes = [
   { path: 'donut', component: DonutchartComponent},
   { path: 'radar', component: RadarChartComponent},
   { path: 'virtual', component: VirtualComponent},
+  { path: 'drag', component: DragComponent},
   { path: '', component: HomeComponent},
   { path: '**', component: HomeComponent},
 ];
