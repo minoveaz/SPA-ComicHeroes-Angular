@@ -20,6 +20,7 @@ import { DonutchartComponent } from './components/donutchart/donutchart.componen
 import { RadarChartComponent } from './components/radar-chart/radar-chart.component';
 import { VirtualComponent } from './components/virtual/virtual.component';
 import { DragComponent } from './components/drag/drag.component';
+import { CountriesComponent } from './components/countries/countries.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: 'radar', component: RadarChartComponent},
   { path: 'virtual', component: VirtualComponent},
   { path: 'drag', component: DragComponent},
+  { path: 'countries', component: CountriesComponent},
   { path: '', component: HomeComponent},
   { path: '**', component: HomeComponent},
 ];

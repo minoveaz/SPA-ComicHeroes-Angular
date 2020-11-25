@@ -6,6 +6,7 @@ import { HttpClientModule} from '@angular/common/http';
 
 import { ChartsModule } from 'ng2-charts';
 import { ScrollingModule} from '@angular/cdk/scrolling';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 import { registerLocaleData } from '@angular/common';
@@ -50,6 +51,7 @@ import { DonutchartComponent } from './components/donutchart/donutchart.componen
 import { RadarChartComponent } from './components/radar-chart/radar-chart.component';
 import { VirtualComponent } from './components/virtual/virtual.component';
 import { DragComponent } from './components/drag/drag.component';
+import { CountriesComponent } from './components/countries/countries.component';
 
 
 @NgModule({
@@ -78,7 +80,8 @@ import { DragComponent } from './components/drag/drag.component';
     DonutchartComponent,
     RadarChartComponent,
     VirtualComponent,
-    DragComponent
+    DragComponent,
+    CountriesComponent
    ],
   imports: [
     BrowserModule,
@@ -87,7 +90,8 @@ import { DragComponent } from './components/drag/drag.component';
     HttpClientModule,
     ReactiveFormsModule,
     ChartsModule,
-    ScrollingModule
+    ScrollingModule,
+    DragDropModule
   ],
   providers: [
     HeroesService,
